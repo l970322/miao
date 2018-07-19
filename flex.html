@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  /*邮箱*/
+    div{
+      display:flex;
+    }
+    .a{
+      background-color:#0174DF;
+    }
+    .b{
+      background-color:#01DFD7;
+      flex-grow:.5;
+      height:100vh;
+      border-right:1px solid; 
+    }
+    .c{
+     
+      background-color: #01DF74;
+      flex-grow: 2;
+    }
+    /*字典*/
+    .cidian {
+      display: flex;
+      text-align:center;
+    }
+    .s1{
+      background-color: #DF0101;
+      height:100vh;
+      flex-basis:100px;
+    }
+    .s2{
+      background-color: #FE9A2E;
+      flex-grow:1;
+      display:flex;
+      flex-direction:column;
+    }
+    .s22{
+      height:70px;
+      background-color: aqua;
+    }
+    .s21{
+      background-color:#8000FF;
+      flex-grow:1;
+      
+    }
+    .s3{
+      background-color: #FF4000;
+      flex-basis:100px;
+    }
+    .s4{
+      background-color: #FFFF00;
+      flex-basis:100px;
+    }
+    
+    /*圣杯*/
+    .shengbei div {
+      height:50px;
+      margin:1px;
+      color:#424242 ;
+      align-items:center;
+      justify-content:center;
+      display: flex;
+    }
+    .top{
+      background-color: #F5A9A9;
+    }
+    .content1{
+      justify-content:space-between;
+    }
+    .celan {
+      width: 200px;
+      background-color: #A9F5D0;
+    }
+    .zhulan{
+      flex-grow: 1;
+      background-color: #58D3F7;
+    }
+    .content2{
+      justify-content:space-around;   
+    }
+    .guding {
+      background-color:#FF8000 ;
+      width: 200px;
+    }
+    .zishiying{
+      flex-grow: 1;
+      background-color: #FAAC58;
+    }
+    /*多栏*/
+    .duolan{
+      display: flex;
+
+    }
+    .a1{
+      background-color:#FF0000; 
+    }
+    .a2{
+      background-color: black;
+      color: white;
+    }
+    .a3{
+      background-color: red;
+    }
+    /*正方形阵列*/
+    .Square{
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      min-width:300px;
+    }
+    .Square div{
+      text-align: center;
+      width:31%;
+      background-color: red;
+      margin:1px;
+      padding-bottom:27%;
+    }
+  </style>
+</head>
+<body>
+  <h1>邮箱</h1>
+  <div class="a">aa</div>
+  <div>
+    <div class="b">bb</div>
+    <div class="c">cc</div>
+ </div>
+  
+  <h1>词典</h1>     
+   <section class="cidian">
+    <div class="s1">Oald 7</div>
+    <div class="s2">
+        <div class="s22">sublime</div>
+        <div class="s21">help</div>
+    </div>
+    <div class="s3">vocabulary</div>
+    <div class="s4">history</div>
+  </section>  
+
+ <h1>圣杯</h1>  
+ <section class="shengbei">
+   <div class="top">顶部</div>
+   <div class="content1">
+     <div class="celan">固定</div>
+     <div class="zhulan">自适应</div>
+    </div>
+    <div class="content1">
+     <div class="zhulan">自适应</div>
+     <div class="celan">固定</div>
+   </div>
+   <div class=" content2"> 
+    <div class="guding">固定</div>
+    <div class="zishiying">自适应</div>
+    <div class="guding">固定</div>
+   </div>
+   <div class="content2">
+     <div class="guding">固定</div>
+     <div class="guding">固定</div>
+     <div class="zishiying">自适应</div>
+   </div>
+   <div class="content2">
+     <div class= "zishiying">自适应</div>
+     <div class= "guding">固定</div>
+     <div class= "guding">固定</div>
+   </div>
+   <div class="top">底部</div>
+  </section>
+
+  <h1>多栏等高</h1>
+  <section class="duolan">
+    <div class="a1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, reiciendis.</div>
+    <div class="a2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis fuga, ea cum natus, iste minima, id Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, doloribus.eum error repellat dicta non quisquam! Laborum cupiditate itaque laboriosam, unde perferendis cum ex incidunt numquam dolorum ad minima quo ea amet est rerum tempora sint aliquid veritatis, ratione dolore recusandae eos odit magnam.</div>
+    <div class="a3">Lorem ipsum do.</div>
+  </section>
+
+  <h1>正方形阵列</h1>
+  <section class="Square">
+    <div class="aa">是</div>
+    <div class="bb">你</div>
+    <div class="cc">偷</div>
+    <div class="dd">了</div>
+    <div class="e">我</div>
+    <div class="f">的</div>
+    <div class="g">秋</div>
+    <div class="h">裤</div>
+    <div class="i">么</div>
+  </section>
+</body>
+</html>

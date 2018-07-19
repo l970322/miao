@@ -1,0 +1,290 @@
+<script type='判断正负'>
+  var number = Number(prompt('输入一个整数'))
+  if (number > 0) {
+    alert('positive')
+  }
+  else if (number == 0 ){
+    alert('zero')
+  }
+  else{
+    alert('negative')
+  }
+</script>
+
+<script type="绝对值">
+  debugger
+  var number = Number(prompt('输入一个浮点数'))
+  if (number > 1000){
+    alert ('数值过大，重新输入')
+  }
+  else if (number < (-1000)){
+    alert('数值过小，重新输入')
+  }else if (number < 0 && number > (-1000)){
+    alert(parseInt(-number))
+  }
+  else{
+    alert (parseInt(number))
+  }
+</script>  
+
+<script type = '奇偶'>  
+    var number = Number(prompt('输入一个正整数'))
+    while(number < 0 ){
+      var number = Number(prompt('输入一个正整数'))
+     }
+    if ( number % 2 == 0){
+      alert('even')
+    }
+    else {
+      alert('add')
+    }
+</script>
+
+<script type='是否两位数'>
+  debugger
+   do{
+    var number = Number(prompt('输入一个正整数'))
+   }while(number < 0,number > 1000)
+
+  if(number <= 99,number >= 10){
+    alert('1')
+  }
+  else{
+    alert('0')
+  }
+</script>
+
+<script type="瓶盖">
+  var number= Number(prompt('请问您有多少幸运和鼓励奖'))
+  if (number == 0&&number == 20 ){
+    alert('1')
+  }
+  else{
+    alert('0')
+  }
+</script>
+
+<script type="比大小">
+  debugger
+  var x = Number(prompt('请输入X'));var y=Number(prompt('请输入Y'))
+  if (x > y){
+    alert('>')
+  }
+  else if (x == y ){
+    alert('=')
+  }
+  else{
+    alert('<')
+  }
+</script>
+
+<script type="能否被3/5整除">
+  debugger
+  do{
+   var number=Number(prompt('请输入数字'))
+  }while((number>100000 || number<-1000000))
+  if(number%3 == 0 && number%5 == 0){
+    alert('YES')
+  }
+  else{
+    alert('NO')
+  }
+</script>
+
+<script type="能否被357整除">
+  debugger
+  var number=Number(prompt('请输入数字'))
+  if(number%3 == 0 && number%5 ==0 && number%7 ==0){
+    alert('3 5 7 ')
+  }
+  else if (number%3 == 0 && number%5 == 0){
+    alert('3 5 ')
+  }
+  else if(number%3 == 0 && number%7 == 0){
+    alert('3 7')
+  }
+  else if(number%5 == 0 && number%7 == 0){
+    alert('5 7 ')
+  }
+  else if(number%3 !==0 || number%5 !==0 || number%7 !==0){
+    alert(''+ number%3 +'' || ''+ number%5 +'' || ''+ number%7 +'' )
+  }
+  else{
+    alert('n')
+  }
+</script>
+
+<script type="有一门不及格的学生">
+  var shuxue = Number(prompt('请输入数学成绩'))
+  var yuwen = Number(prompt('请输入语文成绩'))
+  if(shuxue < 60 || yuwen < 60){
+    alert('1')
+  }
+  else{
+    alert('0')
+  }
+</script>
+
+<script type="约会">
+  debugger
+  var number = Number(prompt('请输入日期'))
+  while(number < 1 || number > 7){
+    var number = Number(prompt('请输入日期'))
+  }
+  if(number == 1 || number == 3 || number == 5){
+    alert('NO')
+  }
+  else {
+    alert('YES')
+  }
+</script>
+
+<script type="骑车与走路">
+  var number = Number(prompt('请输入距离'))
+  var bike = Number(50 + number%3)
+  var walk = Number(number%1.2)
+  if(bike > walk){
+    alert('WALK')
+  } 
+  else if(bike < walk){
+    alert('BIKE')
+  }
+  else{
+    alert('ALL')
+  }
+</script>
+
+<script type="三角形">
+  var x = Number(prompt('输入X'))
+  var y = Number(prompt('输入Y'))
+  var z = Number(prompt('输入z'))
+    if (x + y >= z || y + z >= x || z + x >= y  ){
+      alert('YES')
+    }
+    else {
+      alert('NO')
+    }
+</script>
+
+<script type="闰年">
+  var number = Number(prompt('请输入年份'))
+  if (number % 3200 === 0){
+    alert('N')
+  }else if (number % 400 == 0 ){
+    alert('Y')
+  }else if (number % 100 == 0 ){
+    alert('N')
+  }else if(number % 4 == 0 ){
+    alert('Y')
+  }
+  else{
+    alert('N')
+  }
+</script>
+
+<script type="解方程">
+  debugger
+  var a = Number(prompt('输入A'))
+  var b = Number(prompt('输入B'))
+  var c = Number(prompt('输入C'))
+  var x = b*b - 4*a*c
+  var x1 = (-b + Math.sqrt(x)) / (2 * a )
+  var x2 = (-b - Math.sqrt(x)) / (2 * a )
+  if ( x == 0 ){
+    alert(x1)  
+  }else if (x > 0 ){
+    alert(x1)
+    alert(x2)
+  }else{
+    alert('无解')
+  }
+</script>
+
+<script type="最大整数"> 
+ var a = Number (prompt ('输入A'))
+ var b = Number (prompt ('输入B'))
+ var c = Number (prompt ('输入C'))
+ if (a > b && a > c){
+  alert (a)
+ }else if (b > a && b > c ){
+  alert (b)
+ }else if (c > a && c > b){
+  alert (c)
+ }
+</script>
+    
+<script type="点和正方形关系"> 
+  debugger
+  var X = Number(prompt ('输入坐标X'))
+  var Y = Number(prompt ('输入坐标Y'))
+  if (-1<=X && X<=1 && -1<=Y && X<=1){//表达式需要拆开写
+    alert ('点在正方形内')
+  }
+  else{
+    alert ('不在此正方形中')
+  }
+</script>
+
+<script type="计算器"> 
+  debugger
+ var x = Number (prompt('输入X'))
+ var Y = Number (prompt('输入Y'))
+ var z = prompt('输入运算符')
+ if (z == '*'){
+  alert (x * Y)
+ }else if (z ==  '+'){
+  alert (x + Y )
+ }else if (z ==  '-'){
+  alert (x - Y )
+ }else if (z ==  '/'){
+  alert (x / Y)    
+ }else{
+  alert ('DIVIDED BY ZERO')
+ }
+</script>
+
+<script type="苹果与虫子">
+  var n = Number(prompt('多少苹果'))
+  var x =Number(prompt('虫子几小时吃一个？'))
+  var y = Number(prompt('经过几小时'))
+  var apple = alert(parseInt(n - y/x))
+</script>
+
+<script type="加急文件">
+  debugger
+  var width =  Number(prompt('输入邮件重量'))
+  var s =  prompt('选择是否加急')
+  var count = 8 
+  if (width <= 1000){
+    if(s == 'y' || s == 'Y'){
+        count += 5
+    }
+  }else{
+    var overwidth = Math.round((width - 1000) / 500 + 0.5)
+    count+= overwidth * 4
+    if (s == 'y' || s == 'Y'){
+      count+=5
+    }
+  }
+  console.log(count)
+</script>
+
+<script type="分段函数">
+  debugger
+  var N =Number(prompt('输入N'))
+  var number 
+  if (0 <= N && N < 20){
+    if (0 <= N && N < 5 ){
+      var number = -N + 2.5
+    }else if (5 <= N && N < 10){
+      var number =(2 - 1.5 * (N - 3) * (N - 3))
+    }else if (10 <= N && N < 20){
+      var number = (N * 2 - 1.5)
+    }
+    alert(number.toFixed(3))//保留数字后几位
+  }
+</script>
+
+<script>
+  
+</script>

@@ -1,6 +1,6 @@
 var l970322 = function() {
 
-  function compact(array){
+  compact:function(array){
     for(var i = 0 ; i < array.length ; i++){
       if(array[i] === 0 || array[i] === false || array[i] === "" || array[i] ===undefined || array[i] === null){
         array.splice(i,1)
@@ -11,7 +11,7 @@ var l970322 = function() {
     return array
  }
 
-  function drop(array,n){
+  drop:function (array,n){
     if(n == 0){
       return array
     }else if (n == null){
@@ -21,7 +21,7 @@ var l970322 = function() {
     }
   }
 
-  function pull(array,...value){
+  pull:function (array,...value){
     for(var i = 0 ; i < array.length ; i++){
       for(var j = 0 ; j < ...value.length ; j++){
         if(array[i] == ...value[j]){
@@ -32,7 +32,7 @@ var l970322 = function() {
     }
   }
 
-  function fill(array,value,[start=0],[end=array.length]){
+  fill:function (array,value,[start=0],[end=array.length]){
     for(var i = start ; i < end ; i++){
       array[i] = value
       }
@@ -40,7 +40,7 @@ var l970322 = function() {
     return array
   }
 
-  function indexOf(array,value,[fromIndex=0]){
+  indexOf:function (array,value,[fromIndex=0]){
     for(var i = fromIndex ; i < array.length ; i++){
       if(array[i] == value){
         return i
@@ -49,7 +49,7 @@ var l970322 = function() {
     }
   }
 
-  function dropRight(array,n){
+  dropRight:function (array,n){
     if(n == 0){
       return array
     }
@@ -59,30 +59,27 @@ var l970322 = function() {
     return array
   }
   
-  function head(array){
+  head:function (array){
     if(array === []){
       return undefined
     }
      return array[0]
   }
   
-  function initial(array){
+  initial:function (array){
     array.splice(array.length-1)
     return array
   }
 
+  negate:function (func){
+    return function(...args){
+      return !func(...args)
+    }
+  }
 
- return {
-    compact: compact,
-      drop: drop,
-      pull:pull,
-      fill:fill,
-      indexOf:indexOf,
-      chunk:chunk,
-      dropRight:dropRight,
-      head:head,
-      initial:initial,
-   }
+  function spread(func){
+
+  }
 }() 
 
 

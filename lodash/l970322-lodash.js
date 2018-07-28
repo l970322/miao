@@ -109,7 +109,7 @@ var l970322 = {
       return ary
     }
     var result = []
-    for(var i = 0 ; i < ary.length ; i ++{
+    for(var i = 0 ; i < ary.length ; i ++){
       if(Array.isArray(ary[i])){
         var tmp = flattenDepth(ary[i],depth - 1)
         result = [...result , ...tmp]

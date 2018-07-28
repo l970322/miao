@@ -82,7 +82,7 @@ var l970322 = {
     for (var i = 0 ; i < array.length ; i++){
       if(!Array.isArray(array[i])){
         result.push(array[i])
-      }else(){
+      }else{
         result.push(array[i])
       }
     }

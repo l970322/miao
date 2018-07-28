@@ -124,7 +124,7 @@ var l970322 = {
  fromPairs:function(pairs){
     var result = {}
     for(var i = 0 ; i < pairs.length ; i ++){
-      result = {var[0][1],var[1][1]}
+      result[pairs[i][0]] = pairs[i][1]
     }
     return result
   }

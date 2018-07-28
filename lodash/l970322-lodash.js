@@ -21,7 +21,7 @@ var l970322 = {
     }
   }
 ,
-  pull:function (array,...value){
+  pull:function (array,value){
     for(var i = 0 ; i < array.length ; i++){
       for(var j = 0 ; j < value.length ; j++){
         if(array[i] == value[j]){
@@ -32,7 +32,7 @@ var l970322 = {
     }
   }
 ,
-  fill:function (array,value,[start=0],[end=array.length]){
+  fill:function (array,value){
     for(var i = start ; i < end ; i++){
       array[i] = value
       }
@@ -76,8 +76,100 @@ var l970322 = {
       return !func(...args)
     }
   }
+,
+  flatten:function (array){
+    var reult = []
+    for (var i = 0 ; i < array.length ; i++){
+      if(!Array.isArray(array[i])){
+        result.push(array[i])
+      }
+    }else{
+      for(var j = 0 ; j < array[i].length ; j++){
+        result.push(array[i][j])
+      }
+    }
+    return result
+  }
+,
 
+  flattenDeep:function(array){
+    var result = []
+    for (var i = 0 ; i < ary.length ; i ++){
+      if(Array.isArray(ary[i])){
+        var tmp = flattenDeep(ary[i])
+          result = [...result , ...tmp]
+        }else{
+          result.push(ary[i])
+      }
+    }
+    return result
+  }
+,
 
+  flattenDepth:function(ary,depth){
+    if(depth === 0){
+      return ary
+    }
+    var result = []
+    for(var i = 0 ; i < ary.length ; i ++{
+      if(Array.isArray(ary[i])){
+        var tmp = flattenDepth(ary[i],depth - 1)
+        result = [...result , ...tmp]
+      }else{
+        result.push(ary[i])
+      }
+    }
+    return result
+  }
+,
+
+ fromPairs:function(pairs){
+    var result = {}
+    for(var i = 0 ; i < pairs.length ; i ++){
+      result = {var[0][1],var[1][1]}
+    }
+    return result
+  }
+,
+  nth:function(array,n){
+    if(n >= 0){
+      return array[n -1]
+    }
+    else{
+      return array[ array.length + n] 
+    }
+  }
+,
+  reverse:function(array){
+    var result = []
+    for(var i = array.length - 1 ; i >= 0 ; i --){
+      result.push(array[i])
+    }
+    return result
+  }
+,
+
+  tail:function(array){
+    splice.array(0,1)
+    return array
+  }
+,
+
+  take:function(array,n){
+    var a = []
+    for(var i = 0 ; i < array.length ; i ++){
+      if(n === undefined){
+        a.push (array[0])
+        return a
+      }
+    }
+    if(n === 0){
+      return []
+    }else if (array.length < n){
+      return array
+    }else{
+        return array.slice(0,n)
+    }
+  }
+,
 }
-
-

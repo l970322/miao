@@ -36,9 +36,9 @@ var l970322 = {
     for(var i = start ; i < end ; i++){
       array[i] = value
       }
-    }
     return array
   }
+  
 ,
   indexOf:function (array,value,[fromIndex=0]){
     for(var i = fromIndex ; i < array.length ; i++){

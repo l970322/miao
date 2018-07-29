@@ -1,38 +1,42 @@
 var l970322 = {
 
   compact:function(array){
-    for(var i = 0 ; i < array.length ; i++){
-      if(array[i] === 0 || array[i] === false || array[i] === "" || array[i] ===undefined || array[i] === null){
-        array.splice(i,1)
-        i--
-        length--
+    var result = []
+    for(var item of result){
+      if(item){
+        result.push(item)
       }
     }
-    return array
+    return result
  }
 ,
   drop:function (array,n){
-    if(n == 0){
+     if(n == 0){
       return array
     }else if (n == null){
       return array.splice(1)
+    }else if (n > array.length){
+        return []
     }else{
-      return array.splice(0,n)
+      return array.slice(n)
     }
   }
 ,
   pull:function (array,value){
-    for(var i = 0 ; i < array.length ; i++){
-      for(var j = 0 ; j < value.length ; j++){
-        if(array[i] == value[j]){
-          array.splice(i,1)
-          i--
+    var arr = [...value]
+      for(var j = 0 ; j < array.length ; j++){
+        for(var i = 0 ; i < arr.length ; i++){
+          if(value[i] === array[j]){
+          array.splice(j,1)
+          j--
         }
       }
     }
-  }
+    return array
+}
 ,
-  fill:function (array,value){
+  fill:function (array,value,start = 0 ,end = array.length){
+    var result = []
     for(var i = start ; i < end ; i++){
       array[i] = value
       }
@@ -40,7 +44,7 @@ var l970322 = {
   }
   
 ,
-  indexOf:function (array,value,[fromIndex=0]){
+  indexOf:function (array,value,fromIndex){
     for(var i = fromIndex ; i < array.length ; i++){
       if(array[i] == value){
         return i
@@ -52,6 +56,8 @@ var l970322 = {
   dropRight:function (array,n){
     if(n == 0){
       return array
+    }else if(n == null){
+       array.pop(1)
     }
     for(var i = 0 ; i < n ; i++){
        array.pop(n)
@@ -78,26 +84,28 @@ var l970322 = {
   }
 ,
   flatten:function (array){
-    var reult = []
+     var reult = []
     for (var i = 0 ; i < array.length ; i++){
       if(!Array.isArray(array[i])){
-        result.push(array[i])
+        reult.push(array[i])
       }else{
-        result.push(array[i])
+        for(var j = 0 ; j < array[i].length ; j ++){
+             reult.push(array[i][j])
+      }
+       return reult
       }
     }
-    return result
   }
 ,
 
   flattenDeep:function(array){
     var result = []
-    for (var i = 0 ; i < ary.length ; i ++){
+    for (var i = 0 ; i < array.length ; i ++){
       if(Array.isArray(ary[i])){
-        var tmp = flattenDeep(ary[i])
+        var tmp = l970322.flattenDeep(array[i])
           result = [...result , ...tmp]
         }else{
-          result.push(ary[i])
+          result.push(array[i])
       }
     }
     return result
@@ -111,7 +119,7 @@ var l970322 = {
     var result = []
     for(var i = 0 ; i < ary.length ; i ++){
       if(Array.isArray(ary[i])){
-        var tmp = flattenDepth(ary[i],depth - 1)
+        var tmp = l970322.flattenDepth(ary[i],depth - 1)
         result = [...result , ...tmp]
       }else{
         result.push(ary[i])
@@ -131,7 +139,7 @@ var l970322 = {
 ,
   nth:function(array,n){
     if(n >= 0){
-      return array[n -1]
+      return array[n]
     }
     else{
       return array[ array.length + n] 
@@ -148,7 +156,7 @@ var l970322 = {
 ,
 
   tail:function(array){
-    splice.array(0,1)
+    array.splice(0,1)
     return array
   }
 ,

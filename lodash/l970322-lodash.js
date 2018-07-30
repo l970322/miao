@@ -28,7 +28,7 @@ var l970322 = {
         for(var i = 0 ; i < arr.length ; i++){
           if(value[i] === array[j]){
           array.splice(j,1)
-          j--
+          i--
         }
       }
     }
@@ -178,4 +178,16 @@ var l970322 = {
     }
   }
 ,
+  last:function (array){
+    return array[array.length - 1]
+  }
+,
+  takeRight:function(array,n){
+    if(array.length < n){
+        return array
+    }
+     return array.slice(array.length - n)
+  }
+,
+
 }

@@ -189,5 +189,12 @@ var l970322 = {
      return array.slice(array.length - n)
   }
 ,
-
+  add:function(augend,addend){
+    return augend + addend
+  }
+,
+  divide:function(divided,divisor){
+    return divided / divisor
+  }
+,
 }

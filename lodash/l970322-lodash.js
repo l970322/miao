@@ -197,4 +197,12 @@ var l970322 = {
     return divided / divisor
   }
 ,
+  chunk:function(array,size){
+    var result = []
+    for(var i = 0 ; i < array.length ; i = i + size){
+       result.push(array.slice(i, i + size))
+    }
+    return result
+  }
+,
 }

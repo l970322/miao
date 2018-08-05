@@ -205,4 +205,27 @@ var l970322 = {
     return result
   }
 ,
+  intersection:funciton(...arrays){
+    var result = []
+    var tmp = []
+    for(var i = 1 ;i < array.length ; i ++){
+      tmp = tmp.concat(array[i])
+    }
+    for(var j = 0 ; j < array[0][i] ; j++){
+      if(tmp.includes(array[0][i])){
+        result.push(array[0][i])
+      }
+    }
+    return result
+  }
+,
+  lastIndexOf:function(ary,index,val = ary.length - 1 ){
+    for(var i = val; i >= 0 ; i --){
+        if(ary[i] == index){
+            return i
+        }
+    }
+    return -1
+  }
+,
 }

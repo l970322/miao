@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="./index.css">
+  <style>
+    @font-face {
+    font-family: 'iconfont';  /* project id 910046 */
+    src: url('//at.alicdn.com/t/font_910046_gldfus1hh4q.eot');
+    src: url('//at.alicdn.com/t/font_910046_gldfus1hh4q.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_910046_gldfus1hh4q.woff') format('woff'),
+    url('//at.alicdn.com/t/font_910046_gldfus1hh4q.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_910046_gldfus1hh4q.svg#iconfont') format('svg');
+  }
+  
+  .iconfont{
+      font-weight: 700;
+      margin-right: .2rem;
+      font-family:"iconfont" !important;
+      font-size:.7rem;font-style:normal;
+  }
+  html{
+    background-color: #fff;
+    font-size:26px
+  }
+  p{
+    margin:0;
+  }
+  body{
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+  }
+  div{
+    font-size:.5rem;
+  }
+  
+  .heder{
+    display: flex;
+  }
+  .boxbox{
+      height: 9rem;
+  }
+  .xinhao{
+     flex-grow: .6;
+  }
+  .shijian{
+    font-weight: 700;
+    flex-grow: .6;
+    margin-top: .1rem;
+    
+  }
+  .gongzuo{
+    font-size: .6rem;
+    height: 1.5rem;
+    line-height:2rem;
+    text-align:center;
+  }
+  .sousuo{
+    margin-top: .6rem;
+    height: 1.7rem;
+   background-color: rgba(247,247,247);
+  }
+  .wenzi{
+    font-size: .599rem;
+    color:gray;
+    text-align:center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    line-height: 1.1rem;
+    background-color: #fff;
+    border-radius:.6rem;
+    margin-left: .3rem;
+    margin-right: .3rem;
+  }
+  .body-header{
+    box-sizing:border-box;
+    height: 1.5rem;
+    line-height:1.5rem;
+    padding:0 10px;
+    color: blue;
+    font-size: .5rem;
+  }
+  .tongzhi{
+    color: black;
+    margin-left: .5rem;  
+  }
+  .xiaoxi{
+    font-weight: 700;
+    color: rgba(85,89,106);
+    float:right;
+  }
+  .fenshu{
+    color:rgba(141,151,160);
+  }
+  .body-headerr{
+    display: flex;
+    width: 100%; 
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+  }
+  .shu{
+    height: 2rem;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+  }
+  .shuzi{
+    color: #4B4BEC;
+  }
+  .neirong{
+    color: #CACFD2;
+  }
+  .shu:nth-child(1){
+    border-bottom:2px solid blue;
+  }
+  .contain{
+    flex: 1;
+    box-sizing:border-box;
+    overflow:auto;
+    margin-bottom: 2rem;
+  }
+  .contain-item{
+   padding: .6rem; 
+   font-size: .55rem;
+    border-bottom: .5px solid #ccc;
+  }
+  .contain-item-time{
+    float: right;
+    color: #A6ACAF;
+  }
+  .contain-item-remind{
+    margin-top: .5rem;
+    font-size: .5rem;
+    color: #A6ACAF;
+  }
+  .contain-item-title{
+    position:relative;
+    
+  }
+  .contain-item-title::before{
+    position:absolute;
+    content:"";
+    left: -0.5rem;
+    top:50%;
+    transform:translateY(-50%);
+    height: .29rem;
+    width: .29rem;
+    border-radius:50%;
+  }
+  .footer{
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+    height: 2rem;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    background: #fff;
+  }
+  .footer div{
+    display:flex;
+    width: 25%;
+    flex-direction: column;
+    align-items:center
+  }
+  .blue{
+    color: blue;
+  }
+  </style>
+</head>
+<body>
+  <div class="boxbox">
+    <div class="heder">
+        <span class="xinhao"><i class="iconfont">&#xe637;</i>Sketch</span>
+        <span class="shijian">9:41 AM</span>
+        <span class="dianliang">100%<i class="iconfont">&#xe600;</i></span>
+      </div>
+      <div class="gongzuo"><i class="iconfont"></i>工作台</div>
+      <div class="sousuo">
+        <span class="wenzi"><i class="iconfont">&#xe61e;</i>搜索</span>
+      </div>
+      <div class="tab-header">
+        <div class="body-header">
+          <i class="iconfont">&#xe60e;</i>
+          <span class="tongzhi">五一放假通知</span> 
+          <span class="xiaoxi">1/2</span>
+        </div>
+        <div class="body-headerr">
+          <div class="shu">
+            <span class="shuzi">99</span>
+            <span class="neirong">待审批</span>
+          </div>
+           <div class="shu">
+            <span class="shuzi">18</span>
+            <span class="neirong">待审批</span>
+          </div>
+           <div class="shu">
+            <span class="shuzi">10</span>
+            <span class="neirong">待审批</span>
+          </div>
+           <div class="shu">
+            <span class="shuzi">10</span>
+            <span class="neirong">待审批</span>
+          </div>
+        </div>
+  </div>
+   
+    </div>
+    <div class="contain">
+        <div class="contain-item">
+          <p class="contain-item-title">您的审批申请已通过
+            <span class="contain-item-time">2018-08-02</span>
+          </p>
+          <p class="contain-item-remind">批准理由：同意，预祝取得好成绩</p>
+        </div>
+        <div class="contain-item">
+          <p class="contain-item-title">您的审批申请已通过
+            <span class="contain-item-time">2018-08-02</span>
+          </p>
+          <p class="contain-item-remind">批准理由：同意，预祝取得好成绩</p>
+        </div>
+       <div class="contain-item">
+          <p class="contain-item-title">【通知-需反馈】请大家做好今天第10号台风“安比”...</p>
+          <p class="contain-item-remind">各位同学：接浙江省教育厅《浙江省教育厅办公室关于发...》
+           <span class="contain-item-time">2018-08-12 12:20:20</span>
+         </p>
+        </div>
+       <div class="contain-item">
+          <p class="contain-item-title">【通知】请大家做好今天第10号台风“安比”...</p>
+          <p class="contain-item-remind">各位同学：接浙江省教育厅《浙江省教育厅办公室关于发...》
+           <span class="contain-item-time">2018-08-02</span>
+         </p>
+        </div>
+      
+     </div>
+    <div class="footer">
+        <div><i class="iconfont"></i>发起请假</div>
+        <div><i class="iconfont">&#xe6d0;</i>工作台</div>
+        <div><i class="iconfont">&#xe7e6;</i>组织</div>
+        <div><i class="iconfont">&#xe60b;</i>我的</div>
+      </div>
+    
+</body>
+</html>
